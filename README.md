@@ -1,1 +1,1 @@
-Only for personal study
+Only for personal study.
