@@ -1,9 +1,6 @@
-from selenium import webdriver
-from time import sleep
+import pytest
+from datetime import datetime
 
-service = webdriver.ChromeService(executable_path='C:/selenium_driver/chromedriver.exe')
-wd = webdriver.Chrome(service=service)
-
-wd.maximize_window()
-wd.get('https://www.baidu.com')
-sleep(5)
+if __name__ == '__main__':
+    now = datetime.today().strftime('%Y%m%d_%H%M%S')
+    pytest.main(['cases', f'--html=reports/{now}.html', '--self-contained-html'])
